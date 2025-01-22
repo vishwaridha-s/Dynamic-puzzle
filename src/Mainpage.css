@@ -1,0 +1,42 @@
+/* Mainpage.css */
+
+#options {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#options h1 {
+  animation:glowEffect 1.5s infinite alternate;
+}
+
+#options a {
+  display: inline-block;
+  margin: 20px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#options img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgb(124, 223, 232);
+}
+
+#options a:hover img {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.6);
+}
+
+#options a:focus img {
+  outline: none;
+}
+
+@keyframes glowEffect {
+  0% {
+    text-shadow: 0 0 5px rgba(177, 4, 234, 0.7), 0 0 10px rgba(223, 146, 239, 0.7), 0 0 15px rgba(255, 0, 153, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(86, 198, 229, 0.7), 0 0 10px rgba(103, 151, 255, 0.7), 0 0 15px rgba(21, 209, 222, 0.7);
+  }
+}

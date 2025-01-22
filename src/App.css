@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("https://media1.tenor.com/images/6fe2fa84194b5af89fe2448ca088a95a/tenor.gif?itemid=15263196");
+}
+
+.game-layout {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.reference-image {
+  width: 100%;
+  max-width: 400px;
+  margin-top:50px;
+  margin-bottom: 20px;
+  margin-left:5px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  gap: 1px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.grid-cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ccc;
+  display: flex;
+  position: relative;
+  padding: 0;
+}
+
+#pieces-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#pieces {
+  display: grid;
+  grid-template-columns: repeat(5,80px);
+  gap: 10px;
+}
+
+.controls {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  margin-top: 0;
+  padding: 10px;
+  cursor: pointer;
+  background: linear-gradient(to right, purple, pink);
+  width: 100px;
+  border-radius: 20px 20px;
+  border:1px solid white;
+}
+#pieces img:hover {
+  box-shadow: 0 0 10px white;
+}
+
+
+button:hover {
+  background: linear-gradient(to left, rgb(109, 100, 241), rgb(157, 131, 241));
+  box-shadow: 0 0 10px white;
+}
+.congratulations-message {
+  margin-top: 20px;
+  padding: 20px;
+  color: rgb(249, 249, 249);
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: monospace;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: popOut 0.6s ease-out, glowEffect 1.5s infinite alternate;
+  background-image: url("https://media.tenor.com/pkqQze73yOoAAAAi/confetti-sticker.gif");
+}
+
+@keyframes popOut {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes glowEffect {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7), 0 0 15px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.7), 0 0 15px rgba(255, 255, 255, 0.7);
+  }
+}
